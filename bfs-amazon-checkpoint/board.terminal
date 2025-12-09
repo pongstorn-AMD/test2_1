@@ -1,0 +1,356 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x500f0000]
+[    0.000000] Linux version 6.6.71 (ubuntu@ubuntu) (gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #1 SMP PREEMPT Wed Nov 26 02:31:04 UTC 2025
+[    0.000000] Machine model: V2P-CA15
+[    0.000000] Memory limited to 4096MB
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000080000000-0x00000000ffffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000100000000-0x000000017fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000017fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x000000017fffffff]
+[    0.000000] cma: Reserved 16 MiB at 0x00000000ff000000 on node -1
+[    0.000000] percpu: Embedded 19 pages/cpu s40104 r8192 d29528 u77824
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] CPU features: detected: Spectre-v2
+[    0.000000] CPU features: detected: Spectre-v4
+[    0.000000] CPU features: detected: Kernel page table isolation (KPTI)
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Kernel command line: console=ttyAMA0 lpj=19988480 norandmaps root=/dev/vda1 disk_device=/dev/vda1 rw mem=4294967296 init=/home/ubuntu/gem5-init.sh
+[    0.000000] Unknown kernel command line parameters "disk_device=/dev/vda1", will be passed to user space.
+[    0.000000] printk: log_buf_len individual max cpu contribution: 4096 bytes
+[    0.000000] printk: log_buf_len total cpu_extra contributions: 28672 bytes
+[    0.000000] printk: log_buf_len min size: 16384 bytes
+[    0.000000] printk: log_buf_len: 65536 bytes
+[    0.000000] printk: early log buf free: 14712(89%)
+[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1032192
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] software IO TLB: area num 8.
+[    0.000000] software IO TLB: mapped [mem 0x00000000fb000000-0x00000000ff000000] (64MB)
+[    0.000000] Memory: 4017068K/4194304K available (8320K kernel code, 568K rwdata, 2588K rodata, 1728K init, 270K bss, 160852K reserved, 16384K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=8.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] arch_timer: mmio timer(s) running at 25.16MHz (virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x5cdd39714, max_idle_ns: 440795202620 ns
+[    0.000000] sched_clock: 56 bits at 25MHz, resolution 39ns, wraps every 4398046511084ns
+[    0.000000] Console: colour dummy device 80x25
+[    0.000000] Calibrating delay loop (skipped) preset value.. 9994.24 BogoMIPS (lpj=19988480)
+[    0.000000] pid_max: default: 32768 minimum: 301
+[    0.000000] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.000000] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.000000] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.000000] rcu: Hierarchical SRCU implementation.
+[    0.000000] rcu: 	Max phase no-delay instances is 1000.
+[    0.000000] smp: Bringing up secondary CPUs ...
+[    0.002000] Detected PIPT I-cache on CPU1
+[    0.002000] CPU1: Booted secondary processor 0x0000000001 [0x500f0000]
+[    0.007000] Detected PIPT I-cache on CPU2
+[    0.007000] CPU2: Booted secondary processor 0x0000000002 [0x500f0000]
+[    0.012000] Detected PIPT I-cache on CPU3
+[    0.012000] CPU3: Booted secondary processor 0x0000000003 [0x500f0000]
+[    0.017000] Detected PIPT I-cache on CPU4
+[    0.018000] CPU4: Booted secondary processor 0x0000000004 [0x500f0000]
+[    0.023000] Detected PIPT I-cache on CPU5
+[    0.023000] CPU5: Booted secondary processor 0x0000000005 [0x500f0000]
+[    0.029000] Detected PIPT I-cache on CPU6
+[    0.029000] CPU6: Booted secondary processor 0x0000000006 [0x500f0000]
+[    0.034000] Detected PIPT I-cache on CPU7
+[    0.034000] CPU7: Booted secondary processor 0x0000000007 [0x500f0000]
+[    0.037000] smp: Brought up 1 node, 8 CPUs
+[    0.037000] SMP: Total of 8 processors activated.
+[    0.037000] CPU features: detected: 32-bit EL0 Support
+[    0.037000] CPU features: detected: 32-bit EL1 Support
+[    0.047000] CPU: All CPU(s) started at EL1
+[    0.047000] alternatives: applying system-wide alternatives
+[    0.071000] devtmpfs: initialized
+[    0.076000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.076000] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.076000] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.089000] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+[    0.089000] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.089000] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.089000] cpuidle: using governor menu
+[    0.089000] hw-breakpoint: found 4 breakpoint and 4 watchpoint registers.
+[    0.103001] ASID allocator initialised with 32768 entries
+[    0.103001] Serial: AMBA PL011 UART driver
+[    0.103001] OF: /watchdog@2a490000: could not find phandle 21
+[    0.103001] OF: /kmi@1c060000: could not find phandle 21
+[    0.103001] OF: /kmi@1c070000: could not find phandle 21
+[    0.103001] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.103001] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.103001] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.103001] OF: /rtc@1c170000: could not find phandle 21
+[    0.103001] OF: /rtc@1c170000: could not find phandle 21
+[    0.103001] OF: /rtc@1c170000: could not find phandle 21
+[    0.103001] Modules: 29344 pages in range for non-PLT usage
+[    0.103001] Modules: 520864 pages in range for PLT usage
+[    0.109001] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.109001] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.109001] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.109001] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.109001] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.109001] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.109001] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.109001] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.113001] SCSI subsystem initialized
+[    0.115001] usbcore: registered new interface driver usbfs
+[    0.115001] usbcore: registered new interface driver hub
+[    0.115001] usbcore: registered new device driver usb
+[    0.115001] pps_core: LinuxPPS API ver. 1 registered
+[    0.115001] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.115001] PTP clock support registered
+[    0.117001] vgaarb: loaded
+[    0.122001] clocksource: Switched to clocksource arch_sys_counter
+[    0.128001] Clockevents: could not switch to one-shot mode: dummy_timer is not functional.
+[    0.128001] Could not switch to high resolution mode on CPU 0
+[    0.129001] Clockevents: could not switch to one-shot mode:
+[    0.129001] Clockevents: could not switch to one-shot mode:
+[    0.129001] Clockevents: could not switch to one-shot mode:
+[    0.129001] Clockevents: could not switch to one-shot mode:
+[    0.129001] Clockevents: could not switch to one-shot mode:
+[    0.129001]  dummy_timer is not functional.
+[    0.129001]  dummy_timer is not functional.
+[    0.129001]  dummy_timer is not functional.
+[    0.129001]  dummy_timer is not functional.
+[    0.129001]  dummy_timer is not functional.
+[    0.129001] Clockevents: could not switch to one-shot mode:
+[    0.129001] Could not switch to high resolution mode on CPU 7
+[    0.129001] Could not switch to high resolution mode on CPU 5
+[    0.129001] Could not switch to high resolution mode on CPU 4
+[    0.129001] Could not switch to high resolution mode on CPU 1
+[    0.129001] Could not switch to high resolution mode on CPU 6
+[    0.129001]  dummy_timer is not functional.
+[    0.129001] Clockevents: could not switch to one-shot mode:
+[    0.129001] Could not switch to high resolution mode on CPU 2
+[    0.129001]  dummy_timer is not functional.
+[    0.129001] Could not switch to high resolution mode on CPU 3
+[    0.286003] NET: Registered PF_INET protocol family
+[    0.286003] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.287003] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.287003] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.287003] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.287003] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+[    0.288003] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.288003] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.288003] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.288003] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.292003] RPC: Registered named UNIX socket transport module.
+[    0.292003] RPC: Registered udp transport module.
+[    0.292003] RPC: Registered tcp transport module.
+[    0.292003] RPC: Registered tcp-with-tls transport module.
+[    0.292003] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.292003] PCI: CLS 0 bytes, default 64
+[    0.306003] kvm [1]: HYP mode not available
+[    0.306003] workingset: timestamp_bits=62 max_order=20 bucket_order=0
+[    0.308003] fuse: init (API version 7.39)
+[    0.314003] io scheduler mq-deadline registered
+[    0.314003] io scheduler kyber registered
+[    0.328003] atomic64_test: passed
+[    0.328003] pci-host-generic 30000000.pci: host bridge /pci ranges:
+[    0.328003] pci-host-generic 30000000.pci:   No bus range found for /pci, using [bus 00-ff]
+[    0.328003] pci-host-generic 30000000.pci:       IO 0x002f000000..0x002f00ffff -> 0x0000000000
+[    0.328003] pci-host-generic 30000000.pci:      MEM 0x0040000000..0x007fffffff -> 0x0000000000
+[    0.328003] pci-host-generic 30000000.pci: ECAM at [mem 0x30000000-0x3fffffff] for [bus 00-ff]
+[    0.328003] pci-host-generic 30000000.pci: PCI host bridge to bus 0000:00
+[    0.328003] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.328003] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+[    0.328003] pci_bus 0000:00: root bus resource [mem 0x40000000-0x7fffffff] (bus address [0x00000000-0x3fffffff])
+[    0.328003] pci 0000:00:01.0: [1af4:1000] type 00 class 0xff0000
+[    0.328003] pci 0000:00:01.0: reg 0x10: [io  0x0000-0x001f]
+[    0.328003] pci 0000:00:01.0: reg 0x30: [mem 0x40000000-0x400007ff pref]
+[    0.328003] pci 0000:00:01.0: BAR 6: assigned [mem 0x40000000-0x400007ff pref]
+[    0.328003] pci 0000:00:01.0: BAR 0: assigned [io  0x1000-0x101f]
+[    0.328003] pci_bus 0000:00: resource 4 [io  0x0000-0xffff]
+[    0.328003] pci_bus 0000:00: resource 5 [mem 0x40000000-0x7fffffff]
+[    0.328003] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.328003] OF: /rtc@1c170000: could not find phandle 21
+[    0.328003] virtio-pci 0000:00:01.0: enabling device (0000 -> 0001)
+[    0.328003] virtio-pci 0000:00:01.0: virtio_pci: leaving for legacy driver
+[    0.406004] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    0.433004] virtio_blk virtio0: 1/0/0 default/read/poll queues
+[    0.433004] virtio_blk virtio0: [vda] 49283072 512-byte logical blocks (25.2 GB/23.5 GiB)
+[    0.459004]  vda: vda1 vda15 vda16
+[    0.468005] basic-mmio-gpio: Failed to locate of_node [id: -2]
+[    0.472005] basic-mmio-gpio: Failed to locate of_node [id: -2]
+[    0.475005] basic-mmio-gpio: Failed to locate of_node [id: -2]
+[    0.572006] e1000: Intel(R) PRO/1000 Network Driver
+[    0.572006] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    0.572006] e1000e: Intel(R) PRO/1000 Network Driver
+[    0.572006] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    0.572006] igb: Intel(R) Gigabit Ethernet Network Driver
+[    0.572006] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    0.572006] ixgbe: Intel(R) 10 Gigabit PCI Express Network Driver
+[    0.572006] ixgbe: Copyright (c) 1999-2016 Intel Corporation.
+[    0.581006] ixgbevf: Intel(R) 10 Gigabit PCI Express Virtual Function Network Driver
+[    0.581006] ixgbevf: Copyright (c) 2009 - 2018 Intel Corporation.
+[    0.588006] i40e: Intel(R) Ethernet Connection XL710 Network Driver
+[    0.588006] i40e: Copyright (c) 2013 - 2019 Intel Corporation.
+[    0.588006] iavf: Intel(R) Ethernet Adaptive Virtual Function Network Driver
+[    0.588006] Copyright (c) 2013 - 2018 Intel Corporation.
+[    0.588006] usbcore: registered new interface driver usb-storage
+[    0.588006] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.588006] OF: /rtc@1c170000: could not find phandle 21
+[    0.610006] mousedev: PS/2 mouse device common for all mice
+[    0.610006] IR JVC protocol handler initialized
+[    0.610006] IR MCE Keyboard/mouse protocol handler initialized
+[    0.610006] IR NEC protocol handler initialized
+[    0.610006] IR RC5(x/sz) protocol handler initialized
+[    0.610006] IR RC6 protocol handler initialized
+[    0.610006] IR SANYO protocol handler initialized
+[    0.610006] IR Sharp protocol handler initialized
+[    0.610006] IR Sony protocol handler initialized
+[    0.610006] IR XMP protocol handler initialized
+[    0.610006] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.610006] OF: /rtc@1c170000: could not find phandle 21
+[    0.610006] usbcore: registered new interface driver usbhid
+[    0.610006] usbhid: USB HID core driver
+[    0.610006] NET: Registered PF_PACKET protocol family
+[    0.642006] registered taskstats version 1
+[    0.647006] 1c090000.uart: ttyAMA0 at MMIO 0x1c090000 (irq = 15, base_baud = 0) is a PL011 rev3
+[    0.647006] printk: console [ttyAMA0] enabled
+[    0.670007] 1c0a0000.uart: ttyAMA1 at MMIO 0x1c0a0000 (irq = 16, base_baud = 0) is a PL011 rev3
+[    0.672007] 1c0b0000.uart: ttyAMA2 at MMIO 0x1c0b0000 (irq = 17, base_baud = 0) is a PL011 rev3
+[    0.675007] 1c0c0000.uart: ttyAMA3 at MMIO 0x1c0c0000 (irq = 18, base_baud = 0) is a PL011 rev3
+[    0.677007] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.677007] OF: /rtc@1c170000: could not find phandle 21
+[    0.678007] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.678007] OF: /rtc@1c170000: could not find phandle 21
+[    0.678007] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.678007] OF: /rtc@1c170000: could not find phandle 21
+[    0.678007] clk: Disabling unused clocks
+[    0.708007] EXT4-fs (vda1): mounted filesystem bbfc48f3-0fb5-4416-bea3-5fe958d3b521 r/w with ordered data mode. Quota mode: disabled.
+[    0.708007] VFS: Mounted root (ext4 filesystem) on device 254:1.
+[    0.710007] devtmpfs: mounted
+[    0.710007] Freeing unused kernel memory: 1728K
+[    0.710007] Run /home/ubuntu/gem5-init.sh as init process
+[    0.882009] pickle_driver: loading out-of-tree module taints kernel.
+[    0.893009] pickle_driver_init: DONE
+Executing the following commands
+//------
+/home/ubuntu/gapbs/mthread.hw.pdev.m5 8 100 8//------
+num Threads 8 num iteration 100 delay in engine for 8
+[    1.022011] pickle_driver_open: DONE
+[    1.022011] pickle_driver_data_transfer_mmap: created a kernel space page at paddr 0x1016a5000, vaddr 0xffffff80816a5000
+[    1.022011] pickle_driver_data_transfer_mmap: vm_start 0x7ff7ff6000, vm_end 0x7ff7ff7000, vm_page_prot 0x68000000000fc3
+[    1.022011] pickle_driver_data_transfer_mmap: create type 1 page, vm_page_length: 4096 bytes
+[    1.022011] pickle_driver_data_transfer_mmap: remap_pfn_range vm_start 0x7ff7ff6000, vm_end 0x7ff7ff7000, pfn 0x1016a5, vm_page_prot 0x68000000000fcf
+[    1.022011] pickle_driver_data_transfer_mmap: DONE
+[    1.022011] pickle_driver_open: DONE
+[    1.022011] pickle_driver_ioctl: ioc = -1072667903, 0
+[    1.022011] pickle_driver_ioctl: ioc = ARM64_IOC_PICKLE_DRIVER_MMAP_PADDR
+PickleDeviceManager: Register Uncacheable Page: mmap_id: 0 vaddr: 0x7ff7ff6000 paddr: 0x1016a5000
+writeUncacheablePagePaddr 0x1016a5000 - 0x1016a6000
+[    1.022011] pickle_driver_open: DONE
+[    1.022011] device_write: DONE
+[    1.022011] device_write: DONE
+UCPage: 0x7ff7ff6000
+mthread ROI Start
+Thread 7 0
+Thread 7 1
+Thread 7 2
+Thread 7 3
+Thread 7 4
+Thread 7 5
+Thread 7 6
+Thread 7 7
+Thread 7 8
+Thread 7 9
+Thread 7 10
+Thread 7 11
+Thread 7 12
+Thread 7 13
+Thread 7 14
+Thread 7 15
+Thread 7 16
+Thread 7 17
+Thread 7 18
+Thread 7 19
+Thread 7 20
+Thread 7 21
+Thread 7 22
+Thread 7 23
+Thread 7 24
+Thread 7 25
+Thread 7 26
+Thread 7 27
+Thread 7 28
+Thread 7 29
+Thread 7 30
+Thread 7 31
+Thread 7 32
+Thread 7 33
+Thread 7 34
+Thread 7 35
+Thread 7 36
+Thread 7 37
+Thread 7 38
+Thread 7 39
+Thread 7 40
+Thread 7 41
+Thread 7 42
+Thread 7 43
+Thread 7 44
+Thread 7 45
+Thread 7 46
+Thread 7 47
+Thread 7 48
+Thread 7 49
+Thread 7 50
+Thread 7 51
+Thread 7 52
+Thread 7 53
+Thread 7 54
+Thread 7 55
+Thread 7 56
+Thread 7 57
+Thread 7 58
+Thread 7 59
+Thread 7 60
+Thread 7 61
+Thread 7 62
+Thread 7 63
+Thread 7 64
+Thread 7 65
+Thread 7 66
+Thread 7 67
+Thread 7 68
+Thread 7 69
+Thread 7 70
+Thread 7 71
+Thread 7 72
+Thread 7 73
+Thread 7 74
+Thread 7 75
+Thread 7 76
+Thread 7 77
+Thread 7 78
+Thread 7 79
+Thread 7 80
+Thread 7 81
+Thread 7 82
+Thread 7 83
+Thread 7 84
+Thread 7 85
+Thread 7 86
+Thread 7 87
+Thread 7 88
+Thread 7 89
+Thread 7 90
+Thread 7 91
+Thread 7 92
+Thread 7 93
+Thread 7 94
+Thread 7 95
+Thread 7 96
+Thread 7 97
+Thread 7 98
+Thread 7 99

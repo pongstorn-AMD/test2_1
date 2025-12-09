@@ -1,0 +1,321 @@
+warn: The `CustomResource` class is deprecated. Please use an `AbstractResource` subclass instead.
+warn: The `CustomDiskImageResource` class is deprecated. Please use `DiskImageResource` instead.
+warn: The `CustomResource` class is deprecated. Please use an `AbstractResource` subclass instead.
+warn: <orphan PickleArmBoard>.kvm_vm already has parent not resetting parent.
+	Note: kvm_vm is not a parameter of PickleArmBoard
+warn: (Previously declared as <orphan PickleArmBoard>.processor.kvm_vm
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (2048 Mbytes) does not match the address range assigned (1024 Mbytes)
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (2048 Mbytes) does not match the address range assigned (1024 Mbytes)
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (2048 Mbytes) does not match the address range assigned (1024 Mbytes)
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (2048 Mbytes) does not match the address range assigned (1024 Mbytes)
+src/sim/kernel_workload.cc:46: info: kernel located at: /workdir/ARTIFACTS/linux-6.6.71/vmlinux
+src/base/loader/symtab.cc:95: warn: Cannot insert a new symbol table due to name collisions. Adding prefix to each symbol's name can resolve this issue.
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+src/cpu/kvm/base.cc:113: info: Using KVM CPU without perf. The stats related to the number of cycles and instructions executed by the KVM CPU will not be updated. The stats should not be used for performance evaluation.
+src/cpu/kvm/base.cc:113: info: Using KVM CPU without perf. The stats related to the number of cycles and instructions executed by the KVM CPU will not be updated. The stats should not be used for performance evaluation.
+src/cpu/kvm/base.cc:113: info: Using KVM CPU without perf. The stats related to the number of cycles and instructions executed by the KVM CPU will not be updated. The stats should not be used for performance evaluation.
+src/cpu/kvm/base.cc:113: info: Using KVM CPU without perf. The stats related to the number of cycles and instructions executed by the KVM CPU will not be updated. The stats should not be used for performance evaluation.
+src/cpu/kvm/base.cc:113: info: Using KVM CPU without perf. The stats related to the number of cycles and instructions executed by the KVM CPU will not be updated. The stats should not be used for performance evaluation.
+src/cpu/kvm/base.cc:113: info: Using KVM CPU without perf. The stats related to the number of cycles and instructions executed by the KVM CPU will not be updated. The stats should not be used for performance evaluation.
+src/cpu/kvm/base.cc:113: info: Using KVM CPU without perf. The stats related to the number of cycles and instructions executed by the KVM CPU will not be updated. The stats should not be used for performance evaluation.
+src/cpu/kvm/base.cc:113: info: Using KVM CPU without perf. The stats related to the number of cycles and instructions executed by the KVM CPU will not be updated. The stats should not be used for performance evaluation.
+board.vncserver: Listening for connections on port 5900
+board.terminal: Listening for connections on port 3456
+board.realview.uart1.device: Listening for connections on port 3457
+board.realview.uart2.device: Listening for connections on port 3458
+board.realview.uart3.device: Listening for connections on port 3459
+board.remote_gdb: Listening for connections on port 7000
+src/arch/arm/fs_workload.cc:121: info: Using bootloader at address 0x10
+src/arch/arm/fs_workload.cc:139: info: Using kernel entry physical address at 0x80000000
+src/arch/arm/linux/fs_workload.cc:111: info: Loading DTB file: /workdir/ARTIFACTS/test2//bfs-amazon-checkpoint/device.dtb at address 0x88000000
+src/cpu/kvm/base.cc:169: info: KVM: Coalesced MMIO disabled by config.
+src/cpu/kvm/base.cc:169: info: KVM: Coalesced MMIO disabled by config.
+src/cpu/kvm/base.cc:169: info: KVM: Coalesced MMIO disabled by config.
+src/cpu/kvm/base.cc:169: info: KVM: Coalesced MMIO disabled by config.
+src/cpu/kvm/base.cc:169: info: KVM: Coalesced MMIO disabled by config.
+src/cpu/kvm/base.cc:169: info: KVM: Coalesced MMIO disabled by config.
+src/cpu/kvm/base.cc:169: info: KVM: Coalesced MMIO disabled by config.
+src/cpu/kvm/base.cc:169: info: KVM: Coalesced MMIO disabled by config.
+src/dev/arm/energy_ctrl.cc:252: warn: Existing EnergyCtrl, but no enabled DVFSHandler found.
+src/cpu/kvm/base.cc:591: hack: Pretending totalOps is equivalent to totalInsts()
+src/sim/simulate.cc:199: info: Entering event queue @ 0.  Starting simulation...
+src/arch/arm/isa_device.cc:73: src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenset_el1
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenclr_el1
+:73: warn: Returning zero for read from miscreg pmintenset_el1
+warn: Returning zero for read from miscreg pmintenset_el1
+src/arch/arm/isa_device.cc:73src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcr_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenset_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenclr_el1
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenset_el1
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenset_el1
+: src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenclr_el1
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcr_el0
+:73: warn: Returning zero for read from miscreg pmintenset_el1
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenclr_el1
+src/arch/arm/isa_device.cc:src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcr_el0
+warn: Returning zero for read from miscreg pmintenclr_el1
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenset_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenset_el0
+:73: src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenclr_el1
+73: src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsclr_el0
+warn: Returning zero for read from miscreg pmcntenset_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmswinc_el0
+:src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmselr_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccntr_el0
+warn: Returning zero for read from miscreg pmintenset_el1
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmuserenr_el0
+:src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsset_el0
+73src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenclr_el1
+: warn: Returning zero for read from miscreg pmcr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenclr_el0
+73: warn: Returning zero for read from miscreg pmcr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsclr_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmswinc_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmselr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenset_el1
+:73src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenclr_el1
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsclr_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcr_el0
+: warn: Returning zero for read from miscreg pmovsclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenset_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenset_el0
+:73: warn: Returning zero for read from miscreg pmcntenset_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmswinc_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenset_el0
+: src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenclr_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsclr_el0
+src/arch/arm/isa_device.cc:73: src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmswinc_el0
+:src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmselr_el0
+warn: Returning zero for read from miscreg pmovsclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccntr_el0
+73: warn: Returning zero for read from miscreg pmselr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmuserenr_el0
+:src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsset_el0
+73: warn: Returning zero for read from miscreg pmccntr_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr2_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr1_el0
+warn: Returning zero for read from miscreg pmuserenr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr2_el0
+: warn: Returning zero for read from miscreg pmevcntr3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccntr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr3_el0
+src/arch/arm/isa_device.cc:warn: Returning zero for read from miscreg pmswinc_el0
+:73: src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr4_el0
+src/arch/arm/isa_device.cc:src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmselr_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccntr_el0
+73: warn: Returning zero for read from miscreg pmuserenr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper0_el0
+:73: warn: Returning zero for read from miscreg pmswinc_el0
+:73: warn: Returning zero for read from miscreg pmevcntr4_el0
+warn: Returning zero for read from miscreg pmcntenclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmuserenr_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr5_el0
+:73: warn: Returning zero for read from miscreg pmovsset_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsset_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmselr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr0_el0
+src/arch/arm/isa_device.cc:73: src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr1_el0
+warn: Returning zero for read from miscreg pmovsclr_el0
+:73: warn: Returning zero for read from miscreg pmovsset_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr2_el0
+:73: warn: Returning zero for read from miscreg pmevtyper1_el0
+73: warn: Returning zero for read from miscreg pmswinc_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr3_el0
+:src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr4_el0
+73src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmselr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmswinc_el0
+: warn: Returning zero for read from miscreg pmevcntr0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper2_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccntr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper2_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper4_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmuserenr_el0
+:73: warn: Returning zero for read from miscreg pmevcntr1_el0
+:73: warn: Returning zero for read from miscreg pmselr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccntr_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper5_el0
+:73: src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper2_el0
+: warn: Returning zero for read from miscreg pmuserenr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr2_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccfiltr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper4_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper5_el0
+:73: warn: Returning zero for read from miscreg pmccntr_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmuserenr_el0
+:73: warn: Returning zero for read from miscreg pmevcntr3_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsset_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr4_el0
+warn: Returning zero for read from miscreg pmevcntr2_el0
+:src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsset_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr0_el0
+:73: warn: Returning zero for read from miscreg pmevcntr3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsset_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr0_el0
+:73: warn: Returning zero for read from miscreg pmccfiltr_el0
+73: warn: Returning zero for read from miscreg pmevtyper4_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr4_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr2_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper2_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr4_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper4_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccfiltr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccfiltr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper0_el0
+:src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper1_el0
+73: warn: Returning zero for read from miscreg pmevcntr2_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr3_el0
+:73: warn: Returning zero for read from miscreg pmevtyper2_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr4_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper2_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper3_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper4_el0
+:73: warn: Returning zero for read from miscreg pmevcntr2_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper3_el0
+:src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper4_el0
+73: warn: Returning zero for read from miscreg pmevcntr3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper5_el0
+:73: warn: Returning zero for read from miscreg pmevcntr5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccfiltr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr4_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccfiltr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr5_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper0_el0
+:src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper1_el0
+73: warn: Returning zero for read from miscreg pmevtyper1_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper2_el0
+:73: warn: Returning zero for read from miscreg pmevtyper2_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper3_el0
+:src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper4_el0
+73: warn: Returning zero for read from miscreg pmevtyper3_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper4_el0
+:73: warn: Returning zero for read from miscreg pmevtyper5_el0
+src/arch/arm/isa_device.ccsrc/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccfiltr_el0
+:73: warn: Returning zero for read from miscreg pmevtyper5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccfiltr_el0
+src/dev/arm/rv_ctrl.cc:176: warn: SCReg: Access to unknown device dcc0:site0:pos0:fn7:dev0
+src/dev/arm/rv_ctrl.cc:122: warn: Tried to read RealView I/O at offset 0x48 that doesn't exist
+src/dev/arm/rv_ctrl.cc:122: warn: Tried to read RealView I/O at offset 0x8 that doesn't exist
+src/dev/arm/rv_ctrl.cc:122: warn: Tried to read RealView I/O at offset 0x48 that doesn't exist
+src/dev/arm/rv_ctrl.cc:122: warn: Tried to read RealView I/O at offset 0x60 that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/dev/arm/rv_ctrl.cc:198: warn: Tried to write RVIO at offset 0xa8 (data 0) that doesn't exist
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenset_el1
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenclr_el1
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenset_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmswinc_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmselr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccntr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmuserenr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsset_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr2_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr4_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper2_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper4_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccfiltr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenset_el1
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenclr_el1
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenset_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmswinc_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmselr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccntr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmuserenr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsset_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr2_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr4_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper2_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper4_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccfiltr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenset_el1
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmintenclr_el1
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenset_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmcntenclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsclr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmswinc_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmselr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccntr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmuserenr_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmovsset_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr2_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr4_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevcntr5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper0_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper1_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper2_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper3_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper4_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmevtyper5_el0
+src/arch/arm/isa_device.cc:73: warn: Returning zero for read from miscreg pmccfiltr_el0

@@ -1,0 +1,58 @@
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.2
+gem5 compiled Dec  8 2025 22:06:14
+gem5 started Dec  9 2025 00:43:07
+gem5 executing on d404f9677123, pid 8861
+command line: /workdir/gem5_pickle/build/ARM/gem5.opt -re --outdir=/workdir/ARTIFACTS/test2//bfs-amazon-pdev_distance_48_offset_16-stride --debug-flags=PickleDeviceUncacheableForwarding /workdir/experiments/mthread2/gem5_configurations/restore_checkpoint.py --application bfs --graph_name=amazon --prefetch_mode single_prefetch --bulk_prefetch_chunk_size 10 --pickle_cache_size 256KiB --prefetch_drop_distance 0 --delegate_last_layer_prefetch False --concurrent_work_item_capacity 64 --bulk_prefetch_num_prefetches_per_hint 5 --enable_pdev=True --prefetch_distance=48 --offset_from_pf_hint=16 --pdev_num_tbes 1024 --private_cache_prefetcher=stride
+
+info: Standard input is not a terminal, disabling listeners.
+Application: bfs
+Graph name: amazon
+Enable Pickle Device: True
+Prefetch Distance: 48, Offset: 16, Drop Distance: 0
+Prefetch Mode: 1, Chunk Size: 10, Prefetches Per Hint: 5
+Delegate to LLC Agent: False
+Concurrent work item capacity: 64
+Num PDEV TBEs: 1024
+Running the simulation
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+Making the Pickle device links wider
+Global frequency set at 1000000000000 ticks per second
+[exit 1] ITER 1: *** ROI start ***
+[exit 2] ITER 1: *** ROI end ***
+   -> turning on devices
+Workend
+Should not be here
