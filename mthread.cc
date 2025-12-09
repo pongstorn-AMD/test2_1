@@ -39,8 +39,10 @@ public:
 	    #if ENABLE_PICKLEDEVICE==1
                 //cerebellum_manager->sendWork((uint64_t)(i),_id);
 		*UCPage = (uint64_t)(_id);
+                cout << "DevThread " << _id << " " << i << "\n";
+            #else  		
+                cout << "Thread " << _id << " " << i << "\n";
             #endif
-            cout << "Thread " << _id << " " << i << "\n";
         }
     }
 };
@@ -60,18 +62,44 @@ int main(int argc, char** argv)
 
     cout << "num Threads " << nt << " num iteration " << num << " delay in engine for " << dly << endl;
 
-#if ENABLE_GEM5==1
-  map_m5_mem();
-  //m5_work_begin_addr(0, 0); // 1st stat dump
-#endif // ENABLE_GEM5
+    #if ENABLE_GEM5==1
+    map_m5_mem();
+    //m5_work_begin_addr(0, 0); // 1st stat dump
+    #endif // ENABLE_GEM5
 
+    #if ENABLE_GEM5==1
+    m5_exit_addr(0);
+    #endif // ENABLE_GEM5
+    std::cout << "mthread checkpointing" << std::endl;
 
-#if ENABLE_PICKLEDEVICE==1
-    //PickleDevicePrefetcherSpecs specs = pdev->getDevicePrefetcherSpecs();
+    #if ENABLE_PICKLEDEVICE==1
+    // why do I need this?
+    //PerfPage = (uint64_t*) pdev->getPerfPagePtr();
+    //std::cout << "PerfPage: 0x" << std::hex << (uint64_t)PerfPage << std::dec << std::endl;
+    //assert(PerfPage != nullptr);
+    #endif
+
+// don't need it here    
+//    #if ENABLE_GEM5==1
+//    m5_exit_addr(0);
+//    #endif // ENABLE_GEM5
+//    std::cout << "mthread extra exit" << std::endl;
+
+    uint64_t use_pdev = 0;
+    #if ENABLE_PICKLEDEVICE==1
+    PickleDevicePrefetcherSpecs specs = pdev->getDevicePrefetcherSpecs();
+    use_pdev = specs.availability;
+    //prefetch_distance = specs.prefetch_distance;
+    //prefetch_mode = specs.prefetch_mode;
+    //bulk_mode_chunk_size = specs.bulk_mode_chunk_size;
+    #endif
+
+    #if ENABLE_PICKLEDEVICE==1
+    assert(use_pdev != 0);	    
     UCPage = (uint64_t*) pdev->getUCPagePtr(0);
     std::cout << "UCPage: 0x" << std::hex << (uint64_t)UCPage << std::dec << std::endl;
     assert(UCPage != nullptr);
-#endif // ENABLE_PICKLEDEVICE
+    #endif // ENABLE_PICKLEDEVICE
 
 
     #if ENABLE_GEM5==1
@@ -90,10 +118,21 @@ int main(int argc, char** argv)
       th.join();
     }
 
+
+    std::cout << "mthread ROI End" << std::endl;
+    #if ENABLE_GEM5==1
+    m5_exit_addr(0);
+
+    #endif // ENABLE_GEM5
     std::cout << "mthread ROI End" << std::endl;
     #if ENABLE_GEM5==1
     m5_exit_addr(0);
     #endif // ENABLE_GEM5
+    std::cout << "mthread ROI End" << std::endl;
+    #if ENABLE_GEM5==1
+    m5_exit_addr(0);
+    #endif // ENABLE_GEM5
+
 
     cout << "all threads finished\n";
 

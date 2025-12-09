@@ -46,7 +46,7 @@
         "multi_thread": false,
         "num_work_ids": 16,
         "phys_addr_range_64": 40,
-        "readfile": "/workdir/ARTIFACTS/test2//bfs-amazon-pdev_distance_48_offset_16-stride/readfile_0x6d2faf76e53789fd",
+        "readfile": "/workdir/ARTIFACTS/test5//bfs-amazon-pdev_distance_48_offset_16-stride/readfile_-0x7040db509d8b2f2",
         "redirect_paths": [],
         "release": {
             "type": "ArmRelease",
@@ -119,7 +119,7 @@
             "command_line": "console=ttyAMA0 lpj=19988480 norandmaps root=/dev/vda1 disk_device=/dev/vda1 rw mem=4294967296 init=/home/ubuntu/gem5-init.sh",
             "cpu_release_addr": 2281701368,
             "dtb_addr": 2281701376,
-            "dtb_filename": "/workdir/ARTIFACTS/test2//bfs-amazon-pdev_distance_48_offset_16-stride/device.dtb",
+            "dtb_filename": "/workdir/ARTIFACTS/test5//bfs-amazon-pdev_distance_48_offset_16-stride/device.dtb",
             "early_kernel_symbols": false,
             "enable_context_switch_stats_dump": false,
             "eventq_index": 0,
