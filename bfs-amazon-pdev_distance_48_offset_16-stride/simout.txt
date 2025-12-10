@@ -3,8 +3,8 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 24.1.0.2
 gem5 compiled Dec  8 2025 22:06:14
-gem5 started Dec  9 2025 21:16:40
-gem5 executing on d404f9677123, pid 9423
+gem5 started Dec 10 2025 00:11:38
+gem5 executing on d404f9677123, pid 9929
 command line: /workdir/gem5_pickle/build/ARM/gem5.opt -re --outdir=/workdir/ARTIFACTS/test5//bfs-amazon-pdev_distance_48_offset_16-stride --debug-flags=PickleDeviceUncacheableForwarding /workdir/experiments/mthread2/gem5_configurations/restore_checkpoint.py --application bfs --graph_name=amazon --prefetch_mode single_prefetch --bulk_prefetch_chunk_size 10 --pickle_cache_size 256KiB --prefetch_drop_distance 0 --delegate_last_layer_prefetch False --concurrent_work_item_capacity 64 --bulk_prefetch_num_prefetches_per_hint 5 --enable_pdev=True --prefetch_distance=48 --offset_from_pf_hint=16 --pdev_num_tbes 1024 --private_cache_prefetcher=stride
 
 info: Standard input is not a terminal, disabling listeners.
@@ -56,6 +56,6 @@ Global frequency set at 1000000000000 ticks per second
    -> turning on devices
 [exit 3] ITER 2: *** ROI start ***
 [exit 4] ITER 2: *** ROI end ***
-Ran a total of 1.14739907225 simulated seconds
-Total wallclock time: 278.75s, 4.65 min
+Ran a total of 1.54540677125 simulated seconds
+Total wallclock time: 282.12s, 4.70 min
 Exit cause:  m5_exit instruction encountered

@@ -69,199 +69,199 @@
 [    0.035000] SMP: Total of 8 processors activated.
 [    0.035000] CPU features: detected: 32-bit EL0 Support
 [    0.035000] CPU features: detected: 32-bit EL1 Support
-[    0.041000] CPU: All CPU(s) started at EL1
-[    0.041000] alternatives: applying system-wide alternatives
-[    0.062000] devtmpfs: initialized
-[    0.065000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
-[    0.065000] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
-[    0.065000] NET: Registered PF_NETLINK/PF_ROUTE protocol family
-[    0.078000] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
-[    0.078000] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
-[    0.078000] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
-[    0.078000] cpuidle: using governor menu
-[    0.078000] hw-breakpoint: found 4 breakpoint and 4 watchpoint registers.
-[    0.092001] ASID allocator initialised with 32768 entries
-[    0.092001] Serial: AMBA PL011 UART driver
-[    0.092001] OF: /watchdog@2a490000: could not find phandle 21
-[    0.092001] OF: /kmi@1c060000: could not find phandle 21
-[    0.092001] OF: /kmi@1c070000: could not find phandle 21
-[    0.092001] OF: /watchdog@1c0f0000: could not find phandle 22
-[    0.092001] OF: /watchdog@1c0f0000: could not find phandle 22
-[    0.092001] OF: /watchdog@1c0f0000: could not find phandle 22
-[    0.092001] OF: /rtc@1c170000: could not find phandle 21
-[    0.092001] OF: /rtc@1c170000: could not find phandle 21
-[    0.092001] OF: /rtc@1c170000: could not find phandle 21
-[    0.092001] Modules: 29344 pages in range for non-PLT usage
-[    0.092001] Modules: 520864 pages in range for PLT usage
-[    0.098001] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
-[    0.098001] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
-[    0.098001] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
-[    0.098001] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
-[    0.098001] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
-[    0.098001] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
-[    0.098001] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
-[    0.098001] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
-[    0.102001] SCSI subsystem initialized
-[    0.104001] usbcore: registered new interface driver usbfs
-[    0.104001] usbcore: registered new interface driver hub
-[    0.104001] usbcore: registered new device driver usb
-[    0.104001] pps_core: LinuxPPS API ver. 1 registered
-[    0.104001] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
-[    0.104001] PTP clock support registered
-[    0.106001] vgaarb: loaded
-[    0.110001] clocksource: Switched to clocksource arch_sys_counter
-[    0.116001] Clockevents: could not switch to one-shot mode: dummy_timer is not functional.
-[    0.116001] Could not switch to high resolution mode on CPU 0
-[    0.117001] Clockevents: could not switch to one-shot mode:
-[    0.117001] Clockevents: could not switch to one-shot mode:
-[    0.117001] Clockevents: could not switch to one-shot mode:
-[    0.117001] Clockevents: could not switch to one-shot mode:
-[    0.117001] Clockevents: could not switch to one-shot mode:
-[    0.117001] Clockevents: could not switch to one-shot mode:
-[    0.117001]  dummy_timer is not functional.
-[    0.117001]  dummy_timer is not functional.
-[    0.117001]  dummy_timer is not functional.
-[    0.117001]  dummy_timer is not functional.
-[    0.117001]  dummy_timer is not functional.
-[    0.117001]  dummy_timer is not functional.
-[    0.117001] Clockevents: could not switch to one-shot mode:
-[    0.117001] Could not switch to high resolution mode on CPU 7
-[    0.117001] Could not switch to high resolution mode on CPU 6
-[    0.117001] Could not switch to high resolution mode on CPU 3
-[    0.117001] Could not switch to high resolution mode on CPU 4
-[    0.117001] Could not switch to high resolution mode on CPU 2
-[    0.117001] Could not switch to high resolution mode on CPU 5
-[    0.117001]  dummy_timer is not functional.
-[    0.117001] Could not switch to high resolution mode on CPU 1
-[    0.270002] NET: Registered PF_INET protocol family
-[    0.270002] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
-[    0.271002] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
-[    0.271002] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
-[    0.271002] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
-[    0.271002] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
-[    0.272002] TCP: Hash tables configured (established 32768 bind 32768)
-[    0.272002] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
-[    0.272002] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
-[    0.272002] NET: Registered PF_UNIX/PF_LOCAL protocol family
-[    0.276002] RPC: Registered named UNIX socket transport module.
-[    0.276002] RPC: Registered udp transport module.
-[    0.276002] RPC: Registered tcp transport module.
-[    0.276002] RPC: Registered tcp-with-tls transport module.
-[    0.276002] RPC: Registered tcp NFSv4.1 backchannel transport module.
-[    0.276002] PCI: CLS 0 bytes, default 64
-[    0.290003] kvm [1]: HYP mode not available
-[    0.290003] workingset: timestamp_bits=62 max_order=20 bucket_order=0
-[    0.290003] fuse: init (API version 7.39)
-[    0.295003] io scheduler mq-deadline registered
-[    0.295003] io scheduler kyber registered
-[    0.318003] atomic64_test: passed
-[    0.318003] pci-host-generic 30000000.pci: host bridge /pci ranges:
-[    0.318003] pci-host-generic 30000000.pci:   No bus range found for /pci, using [bus 00-ff]
-[    0.318003] pci-host-generic 30000000.pci:       IO 0x002f000000..0x002f00ffff -> 0x0000000000
-[    0.318003] pci-host-generic 30000000.pci:      MEM 0x0040000000..0x007fffffff -> 0x0000000000
-[    0.318003] pci-host-generic 30000000.pci: ECAM at [mem 0x30000000-0x3fffffff] for [bus 00-ff]
-[    0.318003] pci-host-generic 30000000.pci: PCI host bridge to bus 0000:00
-[    0.318003] pci_bus 0000:00: root bus resource [bus 00-ff]
-[    0.318003] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
-[    0.318003] pci_bus 0000:00: root bus resource [mem 0x40000000-0x7fffffff] (bus address [0x00000000-0x3fffffff])
-[    0.318003] pci 0000:00:01.0: [1af4:1000] type 00 class 0xff0000
-[    0.318003] pci 0000:00:01.0: reg 0x10: [io  0x0000-0x001f]
-[    0.318003] pci 0000:00:01.0: reg 0x30: [mem 0x40000000-0x400007ff pref]
-[    0.318003] pci 0000:00:01.0: BAR 6: assigned [mem 0x40000000-0x400007ff pref]
-[    0.318003] pci 0000:00:01.0: BAR 0: assigned [io  0x1000-0x101f]
-[    0.318003] pci_bus 0000:00: resource 4 [io  0x0000-0xffff]
-[    0.318003] pci_bus 0000:00: resource 5 [mem 0x40000000-0x7fffffff]
-[    0.318003] OF: /watchdog@1c0f0000: could not find phandle 22
-[    0.318003] OF: /rtc@1c170000: could not find phandle 21
-[    0.318003] virtio-pci 0000:00:01.0: enabling device (0000 -> 0001)
-[    0.318003] virtio-pci 0000:00:01.0: virtio_pci: leaving for legacy driver
-[    0.391004] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
-[    0.423004] virtio_blk virtio0: 1/0/0 default/read/poll queues
-[    0.423004] virtio_blk virtio0: [vda] 49283072 512-byte logical blocks (25.2 GB/23.5 GiB)
-[    0.448004]  vda: vda1 vda15 vda16
-[    0.448004] basic-mmio-gpio: Failed to locate of_node [id: -2]
-[    0.448004] basic-mmio-gpio: Failed to locate of_node [id: -2]
-[    0.448004] basic-mmio-gpio: Failed to locate of_node [id: -2]
-[    0.542005] e1000: Intel(R) PRO/1000 Network Driver
-[    0.542005] e1000: Copyright (c) 1999-2006 Intel Corporation.
-[    0.542005] e1000e: Intel(R) PRO/1000 Network Driver
-[    0.542005] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
-[    0.542005] igb: Intel(R) Gigabit Ethernet Network Driver
-[    0.542005] igb: Copyright (c) 2007-2014 Intel Corporation.
-[    0.542005] ixgbe: Intel(R) 10 Gigabit PCI Express Network Driver
-[    0.542005] ixgbe: Copyright (c) 1999-2016 Intel Corporation.
-[    0.565006] ixgbevf: Intel(R) 10 Gigabit PCI Express Virtual Function Network Driver
-[    0.565006] ixgbevf: Copyright (c) 2009 - 2018 Intel Corporation.
-[    0.570006] i40e: Intel(R) Ethernet Connection XL710 Network Driver
-[    0.570006] i40e: Copyright (c) 2013 - 2019 Intel Corporation.
-[    0.570006] iavf: Intel(R) Ethernet Adaptive Virtual Function Network Driver
-[    0.570006] Copyright (c) 2013 - 2018 Intel Corporation.
-[    0.570006] usbcore: registered new interface driver usb-storage
-[    0.570006] OF: /watchdog@1c0f0000: could not find phandle 22
-[    0.570006] OF: /rtc@1c170000: could not find phandle 21
-[    0.570006] mousedev: PS/2 mouse device common for all mice
-[    0.570006] IR JVC protocol handler initialized
-[    0.570006] IR MCE Keyboard/mouse protocol handler initialized
-[    0.570006] IR NEC protocol handler initialized
-[    0.570006] IR RC5(x/sz) protocol handler initialized
-[    0.570006] IR RC6 protocol handler initialized
-[    0.570006] IR SANYO protocol handler initialized
-[    0.570006] IR Sharp protocol handler initialized
-[    0.570006] IR Sony protocol handler initialized
-[    0.570006] IR XMP protocol handler initialized
-[    0.570006] OF: /watchdog@1c0f0000: could not find phandle 22
-[    0.570006] OF: /rtc@1c170000: could not find phandle 21
-[    0.570006] usbcore: registered new interface driver usbhid
-[    0.570006] usbhid: USB HID core driver
-[    0.570006] NET: Registered PF_PACKET protocol family
-[    0.588006] registered taskstats version 1
-[    0.593006] 1c090000.uart: ttyAMA0 at MMIO 0x1c090000 (irq = 15, base_baud = 0) is a PL011 rev3
-[    0.593006] printk: console [ttyAMA0] enabled
-[    0.595006] 1c0a0000.uart: ttyAMA1 at MMIO 0x1c0a0000 (irq = 16, base_baud = 0) is a PL011 rev3
-[    0.597006] 1c0b0000.uart: ttyAMA2 at MMIO 0x1c0b0000 (irq = 17, base_baud = 0) is a PL011 rev3
-[    0.599006] 1c0c0000.uart: ttyAMA3 at MMIO 0x1c0c0000 (irq = 18, base_baud = 0) is a PL011 rev3
-[    0.602006] OF: /watchdog@1c0f0000: could not find phandle 22
-[    0.602006] OF: /rtc@1c170000: could not find phandle 21
-[    0.608006] OF: /watchdog@1c0f0000: could not find phandle 22
-[    0.608006] OF: /rtc@1c170000: could not find phandle 21
-[    0.609006] OF: /watchdog@1c0f0000: could not find phandle 22
-[    0.609006] OF: /rtc@1c170000: could not find phandle 21
-[    0.609006] clk: Disabling unused clocks
-[    0.641006] EXT4-fs (vda1): mounted filesystem bbfc48f3-0fb5-4416-bea3-5fe958d3b521 r/w with ordered data mode. Quota mode: disabled.
-[    0.641006] VFS: Mounted root (ext4 filesystem) on device 254:1.
-[    0.643006] devtmpfs: mounted
-[    0.643006] Freeing unused kernel memory: 1728K
-[    0.643006] Run /home/ubuntu/gem5-init.sh as init process
-[    0.815008] pickle_driver: loading out-of-tree module taints kernel.
-[    0.824008] pickle_driver_init: DONE
+[    0.045000] CPU: All CPU(s) started at EL1
+[    0.045000] alternatives: applying system-wide alternatives
+[    0.067000] devtmpfs: initialized
+[    0.069000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.069000] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.069000] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.083000] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+[    0.083000] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.083000] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.083000] cpuidle: using governor menu
+[    0.083000] hw-breakpoint: found 4 breakpoint and 4 watchpoint registers.
+[    0.097001] ASID allocator initialised with 32768 entries
+[    0.097001] Serial: AMBA PL011 UART driver
+[    0.097001] OF: /watchdog@2a490000: could not find phandle 21
+[    0.097001] OF: /kmi@1c060000: could not find phandle 21
+[    0.097001] OF: /kmi@1c070000: could not find phandle 21
+[    0.097001] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.097001] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.097001] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.097001] OF: /rtc@1c170000: could not find phandle 21
+[    0.097001] OF: /rtc@1c170000: could not find phandle 21
+[    0.097001] OF: /rtc@1c170000: could not find phandle 21
+[    0.097001] Modules: 29344 pages in range for non-PLT usage
+[    0.097001] Modules: 520864 pages in range for PLT usage
+[    0.103001] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.103001] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.103001] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.103001] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.103001] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.103001] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.103001] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.103001] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.107001] SCSI subsystem initialized
+[    0.109001] usbcore: registered new interface driver usbfs
+[    0.109001] usbcore: registered new interface driver hub
+[    0.109001] usbcore: registered new device driver usb
+[    0.109001] pps_core: LinuxPPS API ver. 1 registered
+[    0.109001] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.109001] PTP clock support registered
+[    0.111001] vgaarb: loaded
+[    0.115001] clocksource: Switched to clocksource arch_sys_counter
+[    0.117001] Clockevents: could not switch to one-shot mode: dummy_timer is not functional.
+[    0.117001] Could not switch to high resolution mode on CPU 0
+[    0.118001] Clockevents: could not switch to one-shot mode:
+[    0.118001] Clockevents: could not switch to one-shot mode:
+[    0.118001] Clockevents: could not switch to one-shot mode:
+[    0.118001] Clockevents: could not switch to one-shot mode:
+[    0.118001] Clockevents: could not switch to one-shot mode:
+[    0.118001] Clockevents: could not switch to one-shot mode:
+[    0.118001]  dummy_timer is not functional.
+[    0.118001]  dummy_timer is not functional.
+[    0.118001]  dummy_timer is not functional.
+[    0.118001]  dummy_timer is not functional.
+[    0.118001]  dummy_timer is not functional.
+[    0.118001]  dummy_timer is not functional.
+[    0.118001] Clockevents: could not switch to one-shot mode:
+[    0.118001] Could not switch to high resolution mode on CPU 6
+[    0.118001] Could not switch to high resolution mode on CPU 7
+[    0.118001] Could not switch to high resolution mode on CPU 4
+[    0.118001] Could not switch to high resolution mode on CPU 5
+[    0.118001] Could not switch to high resolution mode on CPU 3
+[    0.118001] Could not switch to high resolution mode on CPU 2
+[    0.118001]  dummy_timer is not functional.
+[    0.118001] Could not switch to high resolution mode on CPU 1
+[    0.275002] NET: Registered PF_INET protocol family
+[    0.275002] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.276002] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.276002] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.276002] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.276002] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+[    0.277003] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.277003] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.277003] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.277003] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.281003] RPC: Registered named UNIX socket transport module.
+[    0.281003] RPC: Registered udp transport module.
+[    0.281003] RPC: Registered tcp transport module.
+[    0.281003] RPC: Registered tcp-with-tls transport module.
+[    0.281003] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.281003] PCI: CLS 0 bytes, default 64
+[    0.297003] kvm [1]: HYP mode not available
+[    0.297003] workingset: timestamp_bits=62 max_order=20 bucket_order=0
+[    0.299003] fuse: init (API version 7.39)
+[    0.304003] io scheduler mq-deadline registered
+[    0.304003] io scheduler kyber registered
+[    0.319003] atomic64_test: passed
+[    0.319003] pci-host-generic 30000000.pci: host bridge /pci ranges:
+[    0.319003] pci-host-generic 30000000.pci:   No bus range found for /pci, using [bus 00-ff]
+[    0.319003] pci-host-generic 30000000.pci:       IO 0x002f000000..0x002f00ffff -> 0x0000000000
+[    0.319003] pci-host-generic 30000000.pci:      MEM 0x0040000000..0x007fffffff -> 0x0000000000
+[    0.319003] pci-host-generic 30000000.pci: ECAM at [mem 0x30000000-0x3fffffff] for [bus 00-ff]
+[    0.319003] pci-host-generic 30000000.pci: PCI host bridge to bus 0000:00
+[    0.319003] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.319003] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+[    0.319003] pci_bus 0000:00: root bus resource [mem 0x40000000-0x7fffffff] (bus address [0x00000000-0x3fffffff])
+[    0.319003] pci 0000:00:01.0: [1af4:1000] type 00 class 0xff0000
+[    0.319003] pci 0000:00:01.0: reg 0x10: [io  0x0000-0x001f]
+[    0.319003] pci 0000:00:01.0: reg 0x30: [mem 0x40000000-0x400007ff pref]
+[    0.319003] pci 0000:00:01.0: BAR 6: assigned [mem 0x40000000-0x400007ff pref]
+[    0.319003] pci 0000:00:01.0: BAR 0: assigned [io  0x1000-0x101f]
+[    0.319003] pci_bus 0000:00: resource 4 [io  0x0000-0xffff]
+[    0.319003] pci_bus 0000:00: resource 5 [mem 0x40000000-0x7fffffff]
+[    0.319003] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.319003] OF: /rtc@1c170000: could not find phandle 21
+[    0.319003] virtio-pci 0000:00:01.0: enabling device (0000 -> 0001)
+[    0.319003] virtio-pci 0000:00:01.0: virtio_pci: leaving for legacy driver
+[    0.390004] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    0.415004] virtio_blk virtio0: 1/0/0 default/read/poll queues
+[    0.415004] virtio_blk virtio0: [vda] 49283072 512-byte logical blocks (25.2 GB/23.5 GiB)
+[    0.603006]  vda: vda1 vda15 vda16
+[    0.611006] basic-mmio-gpio: Failed to locate of_node [id: -2]
+[    0.613006] basic-mmio-gpio: Failed to locate of_node [id: -2]
+[    0.616006] basic-mmio-gpio: Failed to locate of_node [id: -2]
+[    0.710007] e1000: Intel(R) PRO/1000 Network Driver
+[    0.710007] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    0.710007] e1000e: Intel(R) PRO/1000 Network Driver
+[    0.710007] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    0.710007] igb: Intel(R) Gigabit Ethernet Network Driver
+[    0.710007] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    0.710007] ixgbe: Intel(R) 10 Gigabit PCI Express Network Driver
+[    0.710007] ixgbe: Copyright (c) 1999-2016 Intel Corporation.
+[    0.718007] ixgbevf: Intel(R) 10 Gigabit PCI Express Virtual Function Network Driver
+[    0.718007] ixgbevf: Copyright (c) 2009 - 2018 Intel Corporation.
+[    0.721007] i40e: Intel(R) Ethernet Connection XL710 Network Driver
+[    0.721007] i40e: Copyright (c) 2013 - 2019 Intel Corporation.
+[    0.721007] iavf: Intel(R) Ethernet Adaptive Virtual Function Network Driver
+[    0.721007] Copyright (c) 2013 - 2018 Intel Corporation.
+[    0.721007] usbcore: registered new interface driver usb-storage
+[    0.721007] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.721007] OF: /rtc@1c170000: could not find phandle 21
+[    0.729007] mousedev: PS/2 mouse device common for all mice
+[    0.729007] IR JVC protocol handler initialized
+[    0.729007] IR MCE Keyboard/mouse protocol handler initialized
+[    0.729007] IR NEC protocol handler initialized
+[    0.729007] IR RC5(x/sz) protocol handler initialized
+[    0.729007] IR RC6 protocol handler initialized
+[    0.729007] IR SANYO protocol handler initialized
+[    0.729007] IR Sharp protocol handler initialized
+[    0.729007] IR Sony protocol handler initialized
+[    0.729007] IR XMP protocol handler initialized
+[    0.729007] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.729007] OF: /rtc@1c170000: could not find phandle 21
+[    0.729007] usbcore: registered new interface driver usbhid
+[    0.729007] usbhid: USB HID core driver
+[    0.729007] NET: Registered PF_PACKET protocol family
+[    0.748008] registered taskstats version 1
+[    0.756008] 1c090000.uart: ttyAMA0 at MMIO 0x1c090000 (irq = 15, base_baud = 0) is a PL011 rev3
+[    0.756008] printk: console [ttyAMA0] enabled
+[    0.783008] 1c0a0000.uart: ttyAMA1 at MMIO 0x1c0a0000 (irq = 16, base_baud = 0) is a PL011 rev3
+[    0.822008] 1c0b0000.uart: ttyAMA2 at MMIO 0x1c0b0000 (irq = 17, base_baud = 0) is a PL011 rev3
+[    0.845009] 1c0c0000.uart: ttyAMA3 at MMIO 0x1c0c0000 (irq = 18, base_baud = 0) is a PL011 rev3
+[    0.878009] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.878009] OF: /rtc@1c170000: could not find phandle 21
+[    0.965010] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.965010] OF: /rtc@1c170000: could not find phandle 21
+[    0.972010] OF: /watchdog@1c0f0000: could not find phandle 22
+[    0.972010] OF: /rtc@1c170000: could not find phandle 21
+[    0.972010] clk: Disabling unused clocks
+[    1.056011] EXT4-fs (vda1): mounted filesystem bbfc48f3-0fb5-4416-bea3-5fe958d3b521 r/w with ordered data mode. Quota mode: disabled.
+[    1.056011] VFS: Mounted root (ext4 filesystem) on device 254:1.
+[    1.057011] devtmpfs: mounted
+[    1.057011] Freeing unused kernel memory: 1728K
+[    1.057011] Run /home/ubuntu/gem5-init.sh as init process
+[    1.189012] pickle_driver: loading out-of-tree module taints kernel.
+[    1.201012] pickle_driver_init: DONE
 Executing the following commands
 //------
 /home/ubuntu/gapbs/mthread.hw.pdev.m5 4 10 8//------
 num Threads 4 num iteration 10 delay in engine for 8
 mthread checkpointing
-[    0.895009] pickle_driver_open: DONE
+[    1.292013] pickle_driver_open: DONE
 opened the fd
-[    0.895009] pickle_driver_ioctl: ioc = -2145361148, 1
-[    0.895009] pickle_driver_ioctl: ioc = IOC_PICKLE_DRIVER_GET_DEVICE_SPECS
-[    0.895009] read_spec_from_device: read from addr 0xffffffc080db5010, data 0xf01
-[    0.895009] read_spec_from_device: read from addr 0xffffffc080db5018, data 0xf01
-[    0.895009] read_spec_from_device: read from addr 0xffffffc080db5020, data 0xf01
-[    0.895009] read_spec_from_device: read from addr 0xffffffc080db5028, data 0xf01
-[    0.895009] pickle_driver_ioctl: DONE
+[    1.292013] pickle_driver_ioctl: ioc = -2145361148, 1
+[    1.292013] pickle_driver_ioctl: ioc = IOC_PICKLE_DRIVER_GET_DEVICE_SPECS
+[    1.292013] read_spec_from_device: read from addr 0xffffffc080db5010, data 0xf01
+[    1.292013] read_spec_from_device: read from addr 0xffffffc080db5018, data 0xf01
+[    1.292013] read_spec_from_device: read from addr 0xffffffc080db5020, data 0xf01
+[    1.292013] read_spec_from_device: read from addr 0xffffffc080db5028, data 0xf01
+[    1.292013] pickle_driver_ioctl: DONE
 acquired the spec
-[    0.895009] pickle_driver_open: DONE
-[    0.895009] pickle_driver_data_transfer_mmap: created a kernel space page at paddr 0x102287000, vaddr 0xffffff8082287000
-[    0.895009] pickle_driver_data_transfer_mmap: vm_start 0x7ff7ff6000, vm_end 0x7ff7ff7000, vm_page_prot 0x68000000000fc3
-[    0.895009] pickle_driver_data_transfer_mmap: create type 1 page, vm_page_length: 4096 bytes
-[    0.895009] pickle_driver_data_transfer_mmap: remap_pfn_range vm_start 0x7ff7ff6000, vm_end 0x7ff7ff7000, pfn 0x102287, vm_page_prot 0x68000000000fcf
-[    0.895009] pickle_driver_data_transfer_mmap: DONE
-[    0.895009] pickle_driver_open: DONE
-[    0.895009] pickle_driver_ioctl: ioc = -1072667903, 0
-[    0.895009] pickle_driver_ioctl: ioc = ARM64_IOC_PICKLE_DRIVER_MMAP_PADDR
-PickleDeviceManager: Register Uncacheable Page: mmap_id: 0 vaddr: 0x7ff7ff6000 paddr: 0x102287000
-writeUncacheablePagePaddr 0x102287000 - 0x102288000
-[    0.895009] pickle_driver_open: DONE
-[    0.895009] device_write: DONE
-[    0.895009] device_write: DONE
+[    1.292013] pickle_driver_open: DONE
+[    1.292013] pickle_driver_data_transfer_mmap: created a kernel space page at paddr 0x1022c2000, vaddr 0xffffff80822c2000
+[    1.292013] pickle_driver_data_transfer_mmap: vm_start 0x7ff7ff6000, vm_end 0x7ff7ff7000, vm_page_prot 0x68000000000fc3
+[    1.292013] pickle_driver_data_transfer_mmap: create type 1 page, vm_page_length: 4096 bytes
+[    1.292013] pickle_driver_data_transfer_mmap: remap_pfn_range vm_start 0x7ff7ff6000, vm_end 0x7ff7ff7000, pfn 0x1022c2, vm_page_prot 0x68000000000fcf
+[    1.292013] pickle_driver_data_transfer_mmap: DONE
+[    1.292013] pickle_driver_open: DONE
+[    1.292013] pickle_driver_ioctl: ioc = -1072667903, 0
+[    1.292013] pickle_driver_ioctl: ioc = ARM64_IOC_PICKLE_DRIVER_MMAP_PADDR
+PickleDeviceManager: Register Uncacheable Page: mmap_id: 0 vaddr: 0x7ff7ff6000 paddr: 0x1022c2000
+writeUncacheablePagePaddr 0x1022c2000 - 0x1022c3000
+[    1.292013] pickle_driver_open: DONE
+[    1.292013] device_write: DONE
+[    1.292013] device_write: DONE
 UCPage: 0x7ff7ff6000
 mthread ROI Start

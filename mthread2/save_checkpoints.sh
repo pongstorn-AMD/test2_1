@@ -15,7 +15,7 @@ do
         HOME=/workdir /workdir/gem5_pickle/build/ARM/gem5.opt \
             -re \
             --outdir=$OUTPUT_FOLDER/$application-$graph_name-checkpoint \
-            --debug-flags=PickleDevicePrefetcherProgressTracker \
+            --debug-flags=PickleDeviceUncacheableForwarding \
             /workdir/experiments/mthread2/gem5_configurations/save_checkpoint.py \
             --application=$application \
             --graph_name=$graph_name;
