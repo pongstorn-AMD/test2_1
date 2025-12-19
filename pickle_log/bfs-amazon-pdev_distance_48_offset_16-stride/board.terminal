@@ -1,0 +1,73 @@
+Trial 1 finished; scout_count = 0
+Trial  1 Time:                    0.00699
+Source:               109638
+Trial 2
+[    1.377285] pickle_driver_open: DONE
+opened the fd
+[    1.377320] pickle_driver_ioctl: ioc = -2145361148, 1
+[    1.377335] pickle_driver_ioctl: ioc = IOC_PICKLE_DRIVER_GET_DEVICE_SPECS
+[    1.377353] read_spec_from_device: read from addr 0xffffffc080e15010, data 0x1
+[    1.377373] read_spec_from_device: read from addr 0xffffffc080e15018, data 0x30
+[    1.377392] read_spec_from_device: read from addr 0xffffffc080e15020, data 0x1
+[    1.377412] read_spec_from_device: read from addr 0xffffffc080e15028, data 0xa
+[    1.377431] pickle_driver_ioctl: DONE
+acquired the spec
+Device specs: 
+  . Use pdev: 1
+  . Prefetch distance: 48
+  . Prefetch mode (0: unknown, 1: single, 2: bulk): 1
+  . Chunk size (should be non-zero in bulk mode): 10
+-----
+kernel_name: bfs_kernel
+array_id: 0
+- dst_array: 1
+- addressing_mode: Pointer
+- access_type: Ranged
+- vaddr: 0x11a0430
+- #elements: 548553
+- element_size: 8
+array_id: 1
+- dst_array: 3
+- addressing_mode: Index
+- access_type: Single
+- vaddr: 0xa8fea0
+- #elements: 925872
+- element_size: 4
+array_id: 2
+- dst_array: 0
+- addressing_mode: Index
+- access_type: Single
+- vaddr: 0x660850
+- #elements: 925872
+- element_size: 4
+array_id: 3
+- dst_array: 18446744073709551615
+- addressing_mode: Index
+- access_type: Single
+- vaddr: 0x448d20
+- #elements: 548552
+- element_size: 4
+-----
+Sent job
+sendJob
+[    1.377738] pickle_driver_open: DONE
+[    1.377751] device_write: DONE
+[    1.377762] device_write: DONE
+[    1.377778] pickle_driver_open: DONE
+[    1.377802] pickle_driver_data_transfer_mmap: created a kernel space page at paddr 0x10191f000, vaddr 0xffffff808191f000
+[    1.377830] pickle_driver_data_transfer_mmap: vm_start 0x7ff7ff4000, vm_end 0x7ff7ff5000, vm_page_prot 0x68000000000fc3
+[    1.377859] pickle_driver_data_transfer_mmap: create type 1 page, vm_page_length: 4096 bytes
+[    1.377883] pickle_driver_data_transfer_mmap: remap_pfn_range vm_start 0x7ff7ff4000, vm_end 0x7ff7ff5000, pfn 0x10191f, vm_page_prot 0x68000000000fcf
+[    1.377917] pickle_driver_data_transfer_mmap: DONE
+[    1.377941] pickle_driver_open: DONE
+[    1.377952] pickle_driver_ioctl: ioc = -1072667903, 0
+[    1.377966] pickle_driver_ioctl: ioc = ARM64_IOC_PICKLE_DRIVER_MMAP_PADDR
+PickleDeviceManager: Register Uncacheable Page: mmap_id: 0 vaddr: 0x7ff7ff4000 paddr: 0x10191f000
+writeUncacheablePagePaddr 0x10191f000 - 0x101920000
+[    1.378034] pickle_driver_open: DONE
+[    1.378045] device_write: DONE
+[    1.378055] device_write: DONE
+UCPage: 0x7ff7ff4000
+ROI Start
+Trial 2 finished; scout_count = 0
+ROI End
