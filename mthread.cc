@@ -21,7 +21,7 @@
 #pragma message("Compiling with Pickle device")
 #include "pickle_graph.h"
 std::unique_ptr<PickleDeviceManager> pdev(new PickleDeviceManager());
-uint64_t* UCPage = NULL;
+volatile uint64_t* UCPage = NULL;
 #endif // ENABLE_PICKLEDEVICE
 
 
@@ -73,6 +73,8 @@ int main(int argc, char** argv)
     std::cout << "mthread checkpointing" << std::endl;
 
     #if ENABLE_PICKLEDEVICE==1
+    for (int i = 0; i < 1000*dly; i++)
+	    cout << "dly " << i << "\n";
     // why do I need this?
     //PerfPage = (uint64_t*) pdev->getPerfPagePtr();
     //std::cout << "PerfPage: 0x" << std::hex << (uint64_t)PerfPage << std::dec << std::endl;

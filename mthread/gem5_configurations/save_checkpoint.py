@@ -39,7 +39,6 @@ from m5.objects import (
     PickleDeviceRequestManager,
     PicklePrefetcher,
     TAGE_SC_L_64KB,
-    RubyDataMovementTracker,
 )
 
 from m5.objects import (
@@ -52,57 +51,16 @@ from m5.objects import (
 
 mesh_descriptor = PrebuiltMesh.getMesh8("Mesh8")
 
-prefetch_mode_map = {
-    "single_prefetch": 1,
-    "bulk_prefetch": 2,
-}
-
 parser = argparse.ArgumentParser()
 parser.add_argument("--application", type=str, required=True, choices={"bfs", "pr", "tc", "cc", "spmv"})
 parser.add_argument("--graph_name", type=str, required=True)
-parser.add_argument("--enable_pdev", type=str, required=True, choices={"True", "False"})
-parser.add_argument("--pickle_cache_size", type=str, required=True, help="Prefetcher cache size, e.g., 4KiB")
-parser.add_argument("--prefetch_distance", type=int, required=True)
-parser.add_argument("--prefetch_mode", type=str, required=True, choices=list(prefetch_mode_map.keys()))
-parser.add_argument("--bulk_prefetch_chunk_size", type=int, required=True)
-parser.add_argument("--bulk_prefetch_num_prefetches_per_hint", type=int, required=True)
-parser.add_argument("--offset_from_pf_hint", type=int, required=True)
-parser.add_argument("--prefetch_drop_distance", type=int, required=True)
-parser.add_argument("--delegate_last_layer_prefetch", type=str, required=True, choices={"True", "False"})
-parser.add_argument("--concurrent_work_item_capacity", type=int, required=True)
-parser.add_argument("--pdev_num_tbes", type=int, required=True)
-parser.add_argument(
-    "--private_cache_prefetcher",
-    type=str,
-    required=True,
-    choices=["none", "stride", "imp", "ampm", "sms", "bop", "multiv1"],
-)
+parser.add_argument("--single_threaded", type=str, required=True, choices={"True", "False"})
+# parser.add_argument("--enable_pdev", type=str, required=True, choices=["True", "False"])
 args = parser.parse_args()
 
 application = args.application
 graph_name = args.graph_name
-enable_pdev = args.enable_pdev == "True"
-pickle_cache_size = args.pickle_cache_size
-prefetch_distance = args.prefetch_distance
-prefetch_mode = prefetch_mode_map[args.prefetch_mode]
-bulk_prefetch_chunk_size = args.bulk_prefetch_chunk_size
-bulk_prefetch_num_prefetches_per_hint = args.bulk_prefetch_num_prefetches_per_hint
-private_cache_prefetcher = args.private_cache_prefetcher
-offset_from_pf_hint = args.offset_from_pf_hint
-prefetch_drop_distance = args.prefetch_drop_distance
-delegate_last_layer_prefetch = args.delegate_last_layer_prefetch
-concurrent_work_item_capacity = args.concurrent_work_item_capacity
-pdev_num_tbes = args.pdev_num_tbes
-
-print(f"Application: {application}")
-print(f"Graph name: {graph_name}")
-print(f"Enable Pickle Device: {enable_pdev}")
-print(f"Prefetch Distance: {prefetch_distance}, Offset: {offset_from_pf_hint}, Drop Distance: {prefetch_drop_distance}")
-print(f"Prefetch Mode: {prefetch_mode}, Chunk Size: {bulk_prefetch_chunk_size}, Prefetches Per Hint: {bulk_prefetch_num_prefetches_per_hint}")
-print(f"Delegate to LLC Agent: {delegate_last_layer_prefetch}")
-print(f"Concurrent work item capacity: {concurrent_work_item_capacity}")
-print(f"Num PDEV TBEs: {pdev_num_tbes}")
-
+single_threaded = args.single_threaded == "True"
 # from _m5.core import setOutputDir
 # setOutputDir(f"/workdir/ARTIFACTS/results/bfs-pickle-{graph_name}-distance-32")
 
@@ -119,7 +77,6 @@ def choose_memory_size(application, graph_name):
         return special_memory_requirement[(application, graph_name)]
     return "4GiB"
 
-
 mesh_cache = MeshCacheWithPickleDevice(
     l1i_size="32KiB",
     l1i_assoc=8,
@@ -129,13 +86,13 @@ mesh_cache = MeshCacheWithPickleDevice(
     l2_assoc=16,
     l3_size="32MiB",
     l3_assoc=16,
-    device_cache_size=pickle_cache_size,
-    device_cache_assoc=16,
+    device_cache_size="32KiB",
+    device_cache_assoc=8,
     num_core_complexes=1,
     is_fullsystem=True,
     mesh_descriptor=mesh_descriptor,
-    data_prefetcher_class=private_cache_prefetcher,
-    pdev_num_tbes=pdev_num_tbes,
+    data_prefetcher_class=None,
+    pdev_num_tbes=16,
 )
 
 # Main memory
@@ -146,7 +103,12 @@ memory = ChanneledMemory(
     size=choose_memory_size(application, graph_name),
 )
 
-processor = SimpleProcessor(cpu_type=CPUTypes.O3, isa=ISA.ARM, num_cores=num_cores)
+processor = SimpleProcessor(cpu_type=CPUTypes.KVM, isa=ISA.ARM, num_cores=num_cores)
+
+# Here we tell the KVM CPU (the starting CPU) not to use perf.
+if fast_forward_cpu_type == CPUTypes.KVM:
+    for proc in processor.get_cores():
+        proc.core.usePerf = False
 
 
 class PickleArmBoard(ArmBoard):
@@ -181,9 +143,7 @@ class PickleArmBoard(ArmBoard):
         )
         all_cores = [core.core for core in self.processor.get_cores()]
         self.traffic_snoopers = [
-            TrafficSnooper(
-                watch_ranges=[AddrRange(0x10110000, 0x10130000)], snoop_on=True
-            )
+            TrafficSnooper(watch_ranges=[AddrRange(0x10110000, 0x10130000)])
             for i in range(num_PD_tiles * len(all_cores))
         ]
         self.pickle_device_mmus = [
@@ -196,19 +156,14 @@ class PickleArmBoard(ArmBoard):
         self.pickle_device_request_manager = [
             PickleDeviceRequestManager() for i in range(num_PD_tiles)
         ]
-        num_generators = 1
         self.pickle_device_prefetchers = [
             PicklePrefetcher(
-                software_hint_prefetch_distance=prefetch_distance,
-                prefetch_distance_offset_from_software_hint=offset_from_pf_hint,
-                prefetch_mode=prefetch_mode,
-                bulk_prefetch_chunk_size=bulk_prefetch_chunk_size,
-                bulk_prefetch_num_prefetches_per_hint=bulk_prefetch_num_prefetches_per_hint,
+                software_hint_prefetch_distance=1,
+                prefetch_distance_offset_from_software_hint=0,
                 num_cores=len(all_cores),
-                expected_number_of_prefetch_generators=num_generators,
-                concurrent_work_item_capacity=concurrent_work_item_capacity,
-                prefetch_dropping_distance=prefetch_drop_distance,
-                delegate_last_layer_prefetches_to_llc_agents=delegate_last_layer_prefetch
+                expected_number_of_prefetch_generators=2,
+                concurrent_work_item_capacity=64,
+                prefetch_dropping_distance=16,
             )
             for i in range(num_PD_tiles)
         ]
@@ -229,74 +184,12 @@ class PickleArmBoard(ArmBoard):
                 uncacheable_forwarders=self.traffic_snoopers[
                     i * len(all_cores) : (i + 1) * len(all_cores)
                 ],
-                is_on=False,
             )
             for i in range(num_PD_tiles)
         ]
         self.cache_hierarchy.set_pickle_devices(self.pickle_devices)
         self.cache_hierarchy.set_traffic_uncacheable_forwarders(self.traffic_snoopers)
-        # configure the processors
-        for core in all_cores:
-            core.branchPred = TAGE_SC_L_64KB()
-            core.branchPred.ras.numEntries = 52
-            core.branchPred.btb.numEntries = 16384
-            core.numROBEntries = 448
-            core.LQEntries = 256
-            core.SQEntries = 128
-            core.numIQEntries = 512
-            core.fetchQueueSize = 256
         super()._pre_instantiate()
-        # add the data movement stats
-        for core_tile in self.cache_hierarchy.core_tiles:
-            core_tile.l1d_cache.data_tracker = RubyDataMovementTracker(
-                controller=core_tile.l1d_cache,
-                ruby_system=self.cache_hierarchy.ruby_system,
-            )
-            core_tile.l2_cache.data_tracker = RubyDataMovementTracker(
-                controller=core_tile.l2_cache,
-                ruby_system=self.cache_hierarchy.ruby_system,
-            )
-            core_tile.l3_slice.data_tracker = RubyDataMovementTracker(
-                controller=core_tile.l3_slice,
-                ruby_system=self.cache_hierarchy.ruby_system,
-            )
-        if self.cache_hierarchy._has_l3_only_tiles:
-            for l3_only_tile in self.cache_hierarchy.l3_only_tiles:
-                l3_only_tile.l3_slice.data_tracker = RubyDataMovementTracker(
-                    controller=l3_only_tile.l3_slice,
-                    ruby_system=self.cache_hierarchy.ruby_system,
-                )
-        if num_PD_tiles > 0:
-            for pdev_tile in board.cache_hierarchy.pickle_device_component_tiles:
-                pdev_tile.controller.data_tracker = RubyDataMovementTracker(
-                    controller=pdev_tile.controller,
-                    ruby_system=self.cache_hierarchy.ruby_system,
-                )
-        print("Making the Pickle device links wider")
-        for link in self.cache_hierarchy.ruby_system.network.int_links:
-            if (
-                link.src_node
-                == board.cache_hierarchy.pickle_device_component_tiles[
-                    0
-                ].cross_tile_router
-                or link.dst_node
-                == board.cache_hierarchy.pickle_device_component_tiles[
-                    0
-                ].cross_tile_router
-            ):
-                link.bandwidth_factor = 512
-        for link in self.cache_hierarchy.ruby_system.network.ext_links:
-            if (
-                link.int_node
-                == board.cache_hierarchy.pickle_device_component_tiles[
-                    0
-                ].cross_tile_router
-                or link.ext_node
-                == board.cache_hierarchy.pickle_device_component_tiles[
-                    0
-                ].cross_tile_router
-            ):
-                link.bandwidth_factor = 512
 
     @overrides(ArmBoard)
     def _post_instantiate(self):
@@ -392,6 +285,11 @@ matrix_path_map = {
     "Ga41As41H72": "/home/ubuntu/mm/Ga41As41H72/Ga41As41H72.csr",
 }
 
+command_prefix = ""
+if single_threaded:
+    # here we pin the app to core 1 and run on 1 thread
+    command_prefix = "export OMP_NUM_THREADS=1; taskset -c 1"
+
 if application in {"bfs", "pr", "tc", "cc"}:
     graph_path, direction, starting_node = graph_path_map[graph_name]
     is_directed_graph = direction == "directed"
@@ -406,79 +304,29 @@ if application in {"bfs", "pr", "tc", "cc"}:
         if is_directed_graph:
             symmetric_flag = "-s"
             #assert False, f"tc requires the input graph to be undirected"
-    #command = f"/home/ubuntu/gapbs/{application}2.hw.pdev.m5 -n 2 -f {graph_path} {symmetric_flag} {starting_node_flag}"
+    #command = f"{command_prefix} /home/ubuntu/gapbs/{application}2.hw.pdev.m5 -n 2 -f {graph_path} {symmetric_flag} {starting_node_flag}"
     num_threads = 4
     num_iterations = 10
-    num_dly_cycles = 8
+    num_dly_cycles = 68
     command = f"/home/ubuntu/gapbs/mthread.hw.pdev.m5 {num_threads} {num_iterations} {num_dly_cycles}"
-   
 elif application in {"spmv"}:
     graph_path = matrix_path_map[graph_name]
-    command = f"/home/ubuntu/benchmarks/spmv/spmv.hw.pdev.m5 {graph_path}"
+    command = f"{command_prefix} /home/ubuntu/benchmarks/spmv/spmv.hw.pdev.m5 {graph_path}"
 else:
     assert False, f"Unknown application: {application}"
 
-checkpoint_name = f"{application}-{graph_name}"
-checkpoint_path = Path(f"/workdir/ARTIFACTS/checkpoints/{checkpoint_name}")
 board.set_kernel_disk_workload(
-    kernel=CustomResource("/workdir/ARTIFACTS/vmlinux-6.6.71"),
-    disk_image=CustomDiskImageResource("/workdir/ARTIFACTS/arm64.img.v4"),
+    kernel=CustomResource("/workdir/ARTIFACTS/linux_src/vmlinux"),
+    disk_image=CustomDiskImageResource("/workdir/ARTIFACTS/arm64.img.v2"),
     #bootloader=obtain_resource("arm64-bootloader", resource_version="1.0.0"),
     bootloader=CustomResource("/workdir/.cache/gem5/arm64-bootloader"),
-    checkpoint=checkpoint_path,
     readfile_contents=command,
 )
 
 
-def handle_exit_with_pdev():
-    print("[exit 2] ITER 1: *** ROI end ***")
-    m5.stats.dump()
-    print("   -> turning on devices")
-    for dev in board.pickle_devices:
-        dev.switchOn()
-    for snooper in board.traffic_snoopers:
-        snooper.switchOn()
-    # trigger test again, now the prefetches should not be sent out because
-    # the cache lines are already in the LLC
-    #for agent in board.cache_hierarchy.llc_prefetch_agents:
-    #    agent.triggerTests()
-    yield False
-
-    print("[exit 3] ITER 2: *** ROI start ***")
-    m5.stats.dump()
-    yield False
-
-    print("[exit 4] ITER 2: *** ROI end ***")
-    m5.stats.dump()
+def handle_exit():
+    print("exit 1")
     yield True
-
-
-def handle_exit_without_pdev():
-    print("[exit 2] ITER 1: *** ROI end ***")
-    m5.stats.dump()
-    for snooper in board.traffic_snoopers:
-        snooper.switchOn()
-    yield False
-
-    print("[exit 3] ITER 2: *** ROI start ***")
-    m5.stats.dump()
-    yield False
-
-    print("[exit 4] ITER 2: *** ROI end ***")
-    m5.stats.dump()
-    yield True
-
-
-def handle_max_tick():
-    print("[exit 1] ITER 1: *** ROI start ***")
-    m5.stats.dump()
-    # trigger the test, the prefetch agent 0 should send out requests to LLC
-    #for agent in board.cache_hierarchy.llc_prefetch_agents:
-    #    agent.triggerTests()
-    #m5.debug.flags["ProtocolTrace"].enable()
-    #m5.debug.flags["RubyProtocol"].enable()
-    #m5.debug.flags["PickleRubyDebug"].enable()
-    yield False
 
 
 def handle_work_begin():
@@ -495,25 +343,29 @@ def handle_work_end():
     yield True
 
 
-handle_exit = handle_exit_with_pdev if enable_pdev else handle_exit_without_pdev
-
 simulator = Simulator(
     board=board,
     on_exit_event={
         ExitEvent.EXIT: handle_exit(),
-        ExitEvent.MAX_TICK: handle_max_tick(),
         ExitEvent.WORKBEGIN: handle_work_begin(),
         ExitEvent.WORKEND: handle_work_end(),
     },
 )
+# simulator.override_outdir(output_path)
+
+# We maintain the wall clock time.
 
 globalStart = time.time()
 
 print("Running the simulation")
 
 # We start the simulation.
-simulator.run(1)
-simulator.run(10 ** 18)
+simulator.run()
+
+checkpoint_name = f"{application}-{graph_name}"
+if single_threaded:
+    checkpoint_name += "-single_threaded"
+simulator.save_checkpoint(Path(f"/workdir/ARTIFACTS/checkpoints/{checkpoint_name}"))
 
 print(f"Ran a total of {simulator.get_current_tick() / 1e12} simulated seconds")
 

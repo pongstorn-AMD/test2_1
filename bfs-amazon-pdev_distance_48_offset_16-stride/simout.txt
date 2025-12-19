@@ -2,14 +2,15 @@ gem5 Simulator System.  https://www.gem5.org
 gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 24.1.0.2
-gem5 compiled Dec  8 2025 22:06:14
-gem5 started Dec 10 2025 00:11:38
-gem5 executing on d404f9677123, pid 9929
-command line: /workdir/gem5_pickle/build/ARM/gem5.opt -re --outdir=/workdir/ARTIFACTS/test5//bfs-amazon-pdev_distance_48_offset_16-stride --debug-flags=PickleDeviceUncacheableForwarding /workdir/experiments/mthread2/gem5_configurations/restore_checkpoint.py --application bfs --graph_name=amazon --prefetch_mode single_prefetch --bulk_prefetch_chunk_size 10 --pickle_cache_size 256KiB --prefetch_drop_distance 0 --delegate_last_layer_prefetch False --concurrent_work_item_capacity 64 --bulk_prefetch_num_prefetches_per_hint 5 --enable_pdev=True --prefetch_distance=48 --offset_from_pf_hint=16 --pdev_num_tbes 1024 --private_cache_prefetcher=stride
+gem5 compiled Dec 12 2025 23:26:33
+gem5 started Dec 19 2025 07:25:26
+gem5 executing on 2b0e2cba392b, pid 188
+command line: /workdir/gem5_pickle/build/ARM/gem5.opt -re --outdir=/workdir/ARTIFACTS/test6//bfs-amazon-pdev_distance_48_offset_16-stride --debug-flags=PickleDeviceUncacheableForwarding /workdir/experiments/mthread/gem5_configurations/restore_checkpoint.py --application bfs --graph_name=amazon --prefetch_mode single_prefetch --bulk_prefetch_chunk_size 10 --pickle_cache_size 256KiB --prefetch_drop_distance 0 --delegate_last_layer_prefetch False --concurrent_work_item_capacity 64 --bulk_prefetch_num_prefetches_per_hint 5 --enable_pdev=True --prefetch_distance=48 --offset_from_pf_hint=16 --pdev_num_tbes 1024 --single_threaded=False --private_cache_prefetcher=stride
 
 info: Standard input is not a terminal, disabling listeners.
 Application: bfs
 Graph name: amazon
+Single threaded: False
 Enable Pickle Device: True
 Prefetch Distance: 48, Offset: 16, Drop Distance: 0
 Prefetch Mode: 1, Chunk Size: 10, Prefetches Per Hint: 5
@@ -52,10 +53,5 @@ l3 4194304B None
 Making the Pickle device links wider
 Global frequency set at 1000000000000 ticks per second
 [exit 1] ITER 1: *** ROI start ***
-[exit 2] ITER 1: *** ROI end ***
-   -> turning on devices
-[exit 3] ITER 2: *** ROI start ***
-[exit 4] ITER 2: *** ROI end ***
-Ran a total of 1.54540677125 simulated seconds
-Total wallclock time: 282.12s, 4.70 min
-Exit cause:  m5_exit instruction encountered
+Workend
+Should not be here

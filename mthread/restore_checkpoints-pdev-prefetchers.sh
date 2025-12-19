@@ -1,12 +1,12 @@
 #!/bin/bash
 
+#applications=("bfs" "pr")
 applications=("bfs")
-#graph_names=("test10")
 graph_names=("amazon")
+#graph_names=("amazon" "gplus" "higgs" "livejournal" "orkut" "pokec" "roadNetCA" "twitch" "youtube" "web_berkstan" "web_google" "wiki_talk" "wiki_topcats")
 #private_cache_prefetchers=("imp" "ampm" "stride" "multiv1")
 private_cache_prefetchers=("stride")
-#OUTPUT_FOLDER="/workdir/ARTIFACTS/results_v8/"
-OUTPUT_FOLDER="/workdir/ARTIFACTS/test5/"
+OUTPUT_FOLDER="/workdir/ARTIFACTS/test6/"
 
 PREFETCH_DISTANCE=48
 OFFSET=16
@@ -22,7 +22,7 @@ do
                 -re \
                 --outdir=$OUTPUT_FOLDER/$application-$graph_name-pdev_distance_${PREFETCH_DISTANCE}_offset_$OFFSET-$private_cache_prefetcher \
                 --debug-flags=PickleDeviceUncacheableForwarding \
-                 /workdir/experiments/mthread2/gem5_configurations/restore_checkpoint.py \
+                 /workdir/experiments/mthread/gem5_configurations/restore_checkpoint.py \
                 --application $application \
                 --graph_name=$graph_name \
 		--prefetch_mode "single_prefetch" \
@@ -36,6 +36,7 @@ do
                 --prefetch_distance=$PREFETCH_DISTANCE \
                 --offset_from_pf_hint=$OFFSET \
                 --pdev_num_tbes 1024 \
+		--single_threaded=False \
                 --private_cache_prefetcher=$private_cache_prefetcher &
         done
     done

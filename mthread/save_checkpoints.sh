@@ -5,7 +5,7 @@ graph_names=("amazon")
 #applications=("bfs" "tc" "cc" "pr")
 #graph_names=("test5" "test10" "amazon" "as_skitter" "gplus" "higgs" "livejournal" "orkut" "pokec" "roadNetCA" "twitch" "youtube" "web_berkstan" "web_google" "wiki_talk" "wiki_topcats")
 #graph_names=("test10")
-OUTPUT_FOLDER="/workdir/ARTIFACTS/test5/"
+OUTPUT_FOLDER="/workdir/ARTIFACTS/test6/"
 
 for application in "${applications[@]}"
 do
@@ -16,9 +16,10 @@ do
             -re \
             --outdir=$OUTPUT_FOLDER/$application-$graph_name-checkpoint \
             --debug-flags=PickleDeviceUncacheableForwarding \
-            /workdir/experiments/mthread2/gem5_configurations/save_checkpoint.py \
+            /workdir/experiments/mthread/gem5_configurations/save_checkpoint.py \
             --application=$application \
-            --graph_name=$graph_name;
+            --graph_name=$graph_name \
+            --single_threaded=False;
     done
 done
 
