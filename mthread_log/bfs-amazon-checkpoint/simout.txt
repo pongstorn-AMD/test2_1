@@ -1,0 +1,48 @@
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.2
+gem5 compiled Dec 12 2025 23:26:33
+gem5 started Dec 23 2025 19:06:53
+gem5 executing on 9e0d213e7a20, pid 119
+command line: /workdir/gem5_pickle/build/ARM/gem5.opt -re --outdir=/workdir/ARTIFACTS/test8//bfs-amazon-checkpoint --debug-flags=PickleDeviceUncacheableForwarding /workdir/experiments/mthread/gem5_configurations/save_checkpoint.py --application=bfs --graph_name=amazon --single_threaded=False
+
+Running the simulation
+l1 32KiB stride
+l1 48KiB None
+l2 1MiB None
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB None
+l2 1MiB None
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB None
+l2 1MiB None
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB None
+l2 1MiB None
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB None
+l2 1MiB None
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB None
+l2 1MiB None
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB None
+l2 1MiB None
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB None
+l2 1MiB None
+l3 4194304B None
+Global frequency set at 1000000000000 ticks per second
+exit 1
+Writing checkpoint
+Ran a total of 1.603000058 simulated seconds
+Total wallclock time: 983.40s, 16.39 min
+Exit cause:  m5_exit instruction encountered

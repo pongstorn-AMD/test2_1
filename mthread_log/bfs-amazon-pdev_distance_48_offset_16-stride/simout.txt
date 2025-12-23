@@ -1,0 +1,136 @@
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.2
+gem5 compiled Dec 12 2025 23:26:33
+gem5 started Dec 23 2025 19:27:01
+gem5 executing on 9e0d213e7a20, pid 161
+command line: /workdir/gem5_pickle/build/ARM/gem5.opt -re --outdir=/workdir/ARTIFACTS/test8//bfs-amazon-pdev_distance_48_offset_16-stride --debug-flags=PickleDeviceUncacheableForwarding /workdir/experiments/mthread/gem5_configurations/restore_checkpoint.py --application bfs --graph_name=amazon --prefetch_mode single_prefetch --bulk_prefetch_chunk_size 10 --pickle_cache_size 256KiB --prefetch_drop_distance 0 --delegate_last_layer_prefetch False --concurrent_work_item_capacity 64 --bulk_prefetch_num_prefetches_per_hint 5 --enable_pdev=True --prefetch_distance=48 --offset_from_pf_hint=16 --pdev_num_tbes 1024 --single_threaded=False --private_cache_prefetcher=stride
+
+info: Standard input is not a terminal, disabling listeners.
+Application: bfs
+Graph name: amazon
+Single threaded: False
+Enable Pickle Device: True
+Prefetch Distance: 48, Offset: 16, Drop Distance: 0
+Prefetch Mode: 1, Chunk Size: 10, Prefetches Per Hint: 5
+Delegate to LLC Agent: False
+Concurrent work item capacity: 64
+Num PDEV TBEs: 1024
+Running the simulation
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+l1 32KiB stride
+l1 48KiB stride
+l2 1MiB stride
+l3 4194304B None
+Making the Pickle device links wider
+Global frequency set at 1000000000000 ticks per second
+[exit 1] ITER 1: *** ROI start ***
+1613325153750: uncacheable_snoop_port1: Received perf data: addr = 0x10120000, data = 0xbf574e6ecaaa
+1613325153750: uncacheable_snoop_port1: Received perf data: thread 105190849471829 starts
+[exit 2] ITER 1: *** ROI end ***
+   -> turning on devices
+1613757159000: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x1
+1613757168000: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613757177000: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613757183000: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613757189500: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613757195500: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613757202000: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613757208500: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613757214500: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x10
+1613757221000: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613757227500: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613757233500: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613757240000: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613757246500: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613757252500: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613757259000: uncacheable_snoop_port1: Received control message: addr = 0x10110000, data = 0x0
+1613766747750: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x0
+1613766756750: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0xa0
+1613766762750: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x94
+1613766769250: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x0
+1613766775250: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x1
+1613766781750: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x0
+1613766788250: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x0
+1613766794250: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x0
+1613766800750: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x0
+1613766807250: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0xb0
+1613766813250: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x94
+1613766819750: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x0
+1613766826250: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x1
+1613766832250: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x0
+1613766838750: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x0
+1613766845250: uncacheable_snoop_port1: Received control data: addr = 0x10110008, data = 0x0
+[exit 3] ITER 2: *** ROI start ***
+1613904847500: uncacheable_snoop_port3: Received store request: addr = 0x10094a000, data = 0x0
+1613908340500: uncacheable_snoop_port6: Received store request: addr = 0x10094a000, data = 0x1
+1613918065000: uncacheable_snoop_port3: Received store request: addr = 0x10094a000, data = 0x0
+1613925015250: uncacheable_snoop_port3: Received store request: addr = 0x10094a000, data = 0x0
+1613931756500: uncacheable_snoop_port3: Received store request: addr = 0x10094a000, data = 0x0
+1613938424000: uncacheable_snoop_port3: Received store request: addr = 0x10094a000, data = 0x0
+1613942375250: uncacheable_snoop_port7: Received store request: addr = 0x10094a000, data = 0x2
+1613945122500: uncacheable_snoop_port3: Received store request: addr = 0x10094a000, data = 0x0
+1613952815750: uncacheable_snoop_port3: Received store request: addr = 0x10094a000, data = 0x0
+1613959505750: uncacheable_snoop_port3: Received store request: addr = 0x10094a000, data = 0x0
+1613959857500: uncacheable_snoop_port4: Received store request: addr = 0x10094a000, data = 0x3
+1613966977250: uncacheable_snoop_port3: Received store request: addr = 0x10094a000, data = 0x0
+1613973666750: uncacheable_snoop_port3: Received store request: addr = 0x10094a000, data = 0x0
+1613993877500: uncacheable_snoop_port6: Received store request: addr = 0x10094a000, data = 0x1
+1614002707500: uncacheable_snoop_port6: Received store request: addr = 0x10094a000, data = 0x1
+1614009515000: uncacheable_snoop_port6: Received store request: addr = 0x10094a000, data = 0x1
+1614016220000: uncacheable_snoop_port6: Received store request: addr = 0x10094a000, data = 0x1
+1614022867000: uncacheable_snoop_port6: Received store request: addr = 0x10094a000, data = 0x1
+1614029518500: uncacheable_snoop_port6: Received store request: addr = 0x10094a000, data = 0x1
+1614036134250: uncacheable_snoop_port6: Received store request: addr = 0x10094a000, data = 0x1
+1614042786750: uncacheable_snoop_port6: Received store request: addr = 0x10094a000, data = 0x1
+1614049382250: uncacheable_snoop_port6: Received store request: addr = 0x10094a000, data = 0x1
+1614069378750: uncacheable_snoop_port7: Received store request: addr = 0x10094a000, data = 0x2
+1614076287500: uncacheable_snoop_port7: Received store request: addr = 0x10094a000, data = 0x2
+1614082998750: uncacheable_snoop_port7: Received store request: addr = 0x10094a000, data = 0x2
+1614089696750: uncacheable_snoop_port7: Received store request: addr = 0x10094a000, data = 0x2
+1614096355500: uncacheable_snoop_port7: Received store request: addr = 0x10094a000, data = 0x2
+1614102987250: uncacheable_snoop_port7: Received store request: addr = 0x10094a000, data = 0x2
+1614109605750: uncacheable_snoop_port7: Received store request: addr = 0x10094a000, data = 0x2
+1614116202250: uncacheable_snoop_port7: Received store request: addr = 0x10094a000, data = 0x2
+1614122800250: uncacheable_snoop_port7: Received store request: addr = 0x10094a000, data = 0x2
+1614140740000: uncacheable_snoop_port4: Received store request: addr = 0x10094a000, data = 0x3
+1614146886500: uncacheable_snoop_port4: Received store request: addr = 0x10094a000, data = 0x3
+1614152873750: uncacheable_snoop_port4: Received store request: addr = 0x10094a000, data = 0x3
+1614158812250: uncacheable_snoop_port4: Received store request: addr = 0x10094a000, data = 0x3
+1614164707250: uncacheable_snoop_port4: Received store request: addr = 0x10094a000, data = 0x3
+1614170605750: uncacheable_snoop_port4: Received store request: addr = 0x10094a000, data = 0x3
+1614176506000: uncacheable_snoop_port4: Received store request: addr = 0x10094a000, data = 0x3
+1614182425000: uncacheable_snoop_port4: Received store request: addr = 0x10094a000, data = 0x3
+1614188299750: uncacheable_snoop_port4: Received store request: addr = 0x10094a000, data = 0x3
+[exit 4] ITER 2: *** ROI end ***
+Ran a total of 1.614215191 simulated seconds
+Total wallclock time: 972.09s, 16.20 min
+Exit cause:  m5_exit instruction encountered
