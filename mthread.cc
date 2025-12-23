@@ -22,6 +22,7 @@
 #include "pickle_graph.h"
 std::unique_ptr<PickleDeviceManager> pdev(new PickleDeviceManager());
 volatile uint64_t* UCPage = NULL;
+volatile uint64_t* PerfPage = NULL;
 #endif // ENABLE_PICKLEDEVICE
 
 
@@ -70,22 +71,22 @@ int main(int argc, char** argv)
     #if ENABLE_GEM5==1
     m5_exit_addr(0);
     #endif // ENABLE_GEM5
-    std::cout << "mthread checkpointing" << std::endl;
+    std::cout << "mthread checkpointing save or restore" << std::endl;
 
     #if ENABLE_PICKLEDEVICE==1
     for (int i = 0; i < 1000*dly; i++)
 	    cout << "dly " << i << "\n";
     // why do I need this?
-    //PerfPage = (uint64_t*) pdev->getPerfPagePtr();
-    //std::cout << "PerfPage: 0x" << std::hex << (uint64_t)PerfPage << std::dec << std::endl;
-    //assert(PerfPage != nullptr);
+    PerfPage = (uint64_t*) pdev->getPerfPagePtr();
+    std::cout << "PerfPage: 0x" << std::hex << (uint64_t)PerfPage << std::dec << std::endl;
+    assert(PerfPage != nullptr);
     #endif
 
-// don't need it here    
-//    #if ENABLE_GEM5==1
-//    m5_exit_addr(0);
-//    #endif // ENABLE_GEM5
-//    std::cout << "mthread extra exit" << std::endl;
+
+    #if ENABLE_GEM5==1
+    m5_exit_addr(0);
+    #endif // ENABLE_GEM5
+    std::cout << "mthread turn device on" << std::endl;
 
     uint64_t use_pdev = 0;
     #if ENABLE_PICKLEDEVICE==1
@@ -124,16 +125,15 @@ int main(int argc, char** argv)
     std::cout << "mthread ROI End" << std::endl;
     #if ENABLE_GEM5==1
     m5_exit_addr(0);
-
     #endif // ENABLE_GEM5
-    std::cout << "mthread ROI End" << std::endl;
-    #if ENABLE_GEM5==1
-    m5_exit_addr(0);
-    #endif // ENABLE_GEM5
-    std::cout << "mthread ROI End" << std::endl;
-    #if ENABLE_GEM5==1
-    m5_exit_addr(0);
-    #endif // ENABLE_GEM5
+//    std::cout << "mthread ROI End" << std::endl;
+//    #if ENABLE_GEM5==1
+//    m5_exit_addr(0);
+//    #endif // ENABLE_GEM5
+//    std::cout << "mthread ROI End" << std::endl;
+//    #if ENABLE_GEM5==1
+//    m5_exit_addr(0);
+//    #endif // ENABLE_GEM5
 
 
     cout << "all threads finished\n";
